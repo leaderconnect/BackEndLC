@@ -223,12 +223,12 @@ userRouter.post('/forgotPassword', async (req, res, next) => {
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                        user: "srinivas.y@lionorbit.com",
-                        pass: "Hemalatha#143",
+                        user: "leaderconnect.srnd@gmail.com",
+                        pass: "LC@@SRND",
                     },
                 });
                 var mailOptions = {
-                    from: "srinivas.y@lionorbit.com",
+                    from: "leaderconnect.srnd@gmail.com",
                     to: req.body.email,
                     subject: 'Reset You Password',
                     text: "This is system generated password for your lc account.You can continue with this password or you can change the password after logn.Thank You. Your Password is "+generatedPassword
