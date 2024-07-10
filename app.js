@@ -25,7 +25,7 @@ var pdfRouter = require('./MVCLC/Routers/FiltersPdffilesRouter');
 
 
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://crud:sri123@crudapp.gzvya.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true,});
+mongoose.connect("mongodb+srv://leaderconnectsrnd:Lc123@mycluster.nlbrmqh.mongodb.net/?retryWrites=true&w=majority&appName=MyCluster",{useNewUrlParser: true,useUnifiedTopology: true,});
 
 mongoose.connection.on("error",err=>{
     console.log("Failed to Connect");
