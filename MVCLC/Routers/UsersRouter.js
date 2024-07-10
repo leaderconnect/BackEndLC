@@ -208,7 +208,6 @@ userRouter.post('/forgotPassword', async (req, res, next) => {
     try {
         var queryEmail = { email: req.body.email };
         var user = await Users.find(queryEmail);
-        console.log(user);
         if (user.length < 1) {
             res.status(200).json({
                 status: false,
@@ -235,6 +234,7 @@ userRouter.post('/forgotPassword', async (req, res, next) => {
                 };
     
                 transporter.sendMail(mailOptions, function (error, info) {
+                    console.log(error);
                     if (error) {
                         return res.status(200).json({
                             status: false,
